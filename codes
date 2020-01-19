@@ -10,3 +10,12 @@ To test connectivity: Run the command: ansible [namehost] -m ping -i [filename :
 Playbook:
 the command to run a playbook: ansible-playbook [playbook name] -i[name of inventory file] {the inveotry file is optional}
 NOTE: apm install linter-js-yaml to validate the yaml files
+
+sample playbook:
+-
+  name: reading about ansible_host
+  hosts: websrver
+  tasks:
+    - name: install apache
+      pkg: apache2
+      state: present
