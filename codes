@@ -1,0 +1,12 @@
+create a controller and 2 other servers
+Check ip address of both servers : ifconfig
+sudo vi /etc/hostname : change the name
+sudo vi /etc/hosts : change the name on both line [localhost name]
+Install Ansible : https://www.linuxtechi.com/install-ansible-centos-8-rhel-8/ (if its centos8)
+create/edit the inventory file : mkdir [name] > cd [name]
+cat > inventory.txt : [hostname] ansible_host=[ip address] ansible_ssh_pass=[password]
+To test connectivity: Run the command: ansible [namehost] -m ping -i [filename : in this case inventory]
+
+Playbook:
+the command to run a playbook: ansible-playbook [playbook name] -i[name of inventory file] {the inveotry file is optional}
+NOTE: apm install linter-js-yaml to validate the yaml files
